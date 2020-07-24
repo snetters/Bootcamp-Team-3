@@ -148,12 +148,6 @@ def search_data():
         json_data = request.get_json()
         search_term = json_data["search_term"]
 
-    #for item in products:
-    #    if search_term.lower() in item["name"].lower():
-    #        search_match.append(item)
-
-    ## send back the WHOLE array of data, so the client can redisplay it
-    #return jsonify(products=products, search_match=search_match, size=search_size)
 
     # Just for testing purposes right now
     return true;
