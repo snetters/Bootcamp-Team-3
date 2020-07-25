@@ -1,15 +1,9 @@
 from flask import Flask
 from flask import request
-import pyodbc
-import requests
-
 
 import ast
 
 app = Flask(__name__)
-
-
-
 
 
 @app.route("/backend/time")
@@ -80,16 +74,6 @@ def userInfoVerification(inputParams):
         return {"error": "passIsUpper"}
 
     ## We can put the username through the database here to check if this user already exists
-
-    cursor = conn.cursor()
-    cursor.execute('SELECT * FROM FFDB.dbo.Users WHERE username = ' + username + 'OR email = ' + email)
-
-    if cursor == null:
-        cursor.execute('INSERT INTO FFDB.dbo.Users (username, password, email) VALUES ('+username+', '+pasW+','+email+')')
-    else:
-        return {"error"} #Specify error that username or email are already in use
-
-
     ## At this point, the user information is valid
 
     ## We send this data to the database
@@ -118,36 +102,11 @@ def loginVerification(inputParams):
     pasW = inputParams.get("pass")
 
     ## VERIFY W/ DATABASE HERE
-    cursor = conn.cursor()
-    cursor.execute('SELECT * FROM FFDB.dbo.Users WHERE username = {} AND password = {}').format(username, pasW)
-    #cursor.execute('SELECT * FROM FFDB.Users WHERE username = ' + username + 'AND password = ' + pasW)
-
-
-    if cursor != null:
-        return {} # login successful
-    else:
-        return {"error"} #Specify error that username or password are not correct
 
     ## We can put the username through the database here to check if this user already exists
     ## At this point, the user information is valid
-
-
 
     ## We send this data to the database
     userInfo = {"username": username, "pass": pasW, "verified": True}
 
     return userInfo
-
-@app.route('/backend/search', methods=['GET', 'POST'])
-def search_data():
-
-    # First clears out the old search items
-    # 
-    # Gets value of term user sent in
-    if request.method == "POST":
-        json_data = request.get_json()
-        search_term = json_data["search_term"]
-
-
-    # Just for testing purposes right now
-    return true;

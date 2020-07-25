@@ -21,23 +21,31 @@ def create_account():
     data = request.get_json()
     # Dictionary values aren't set in stone. Need to change it to what values are sent over from frontend
     if data["password"] != data["confirm_password"]:
-        print("Passwords do not match. Please retype")
-        return "Passwords do not match. Please retype" #not sure what it should actually return, depends on front end
+        # This is just an example of what could be sent back with jsonify
+        # Depends on what the backend is
+        response = {
+            "error": "The password do not match.",
+            "success": False
+        }
+        return jsonify(response=response)
     else:
         user_list = get_user_list()
         if data["username"] in user_list:
-            print("Username is taken. Please enter a different username")
-            return "Username is taken. Please enter a different username" #same as password
+            response = {
+                "error": "This username is taken. Please enter a new one.",
+                "success": False
+            }
+            return jsonify(response=response)
         else:
             data = {
             'name': name,
             'username': username,
             'password': password,
             'email': email,
-        
             }
             result = firebase.post('/fundflow-team3/Users', data)
-            print(result)
+    # Based on a route to a dashboard that is specific to the user
+    return redirect("/dashboard/" + data["username"])
 
 @app.route('/backend/login', methods=['GET', 'POST'])
 def login():
@@ -46,7 +54,7 @@ def login():
     data = request.get_json()
     user_list = get_user_list()
 
-    # Would you want to check for email as well
+    # Would you want to check for email as well?
     if data["username"] not in user_list:
         response = {
             "error": "We do not have an account registered under that username",
@@ -54,9 +62,10 @@ def login():
         }
         return jsonify(response=response)
     else:
+        # Does full_dict check everything at once?
         full_dict = user_info()
         if password == full_dict[data["username"]]:
-            return redirect("/dashboard") # Or whatever we call the user homepage
+            return redirect("/dashboard/" + data["username"]) 
         else:
             response = {
                 "error": "The password does not match the password in the system",
