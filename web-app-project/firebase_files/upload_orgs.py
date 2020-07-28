@@ -1,4 +1,4 @@
-#valid_username : check to see if a username already exists
+#
 #
 
 from firebase import firebase
@@ -11,6 +11,7 @@ table = df.to_numpy()
 data = {
     
     "ein_list" : list(table[:, 0]),
+    "link" : list(table[:, 1]),
     "org_names" : list(df.index)  
     }
 
