@@ -16,7 +16,7 @@ org = "NAACP"
 
 def get_donations(username):
     for key in result:
-        if result[key]["username"] ==  username:
+        if result[key]["username"] == username:
             return key
         #user has to already be in our database
 
