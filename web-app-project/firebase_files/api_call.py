@@ -7,16 +7,41 @@ import ast
 app = Flask(__name__)
 
 query = "black transmens inc" #would come from requests.args
-org_list = get_orgs.org_list()
-if query in org_list:
-    org_index = org_list.index(query)
-    ein = get_orgs.ein_list()[org_index]
 
-    search = "https://projects.propublica.org/nonprofits/api/v2/organizations/" + ein + ".json"
-    response = requests.get(search)
-    print(response.content)
+@app.route('/backend/search', methods=['GET', 'POST'])
+def search_data():
 
-else:
-    response = "We do not have " + query + " in our database \nSorry about that!"
-    print(response)
+    #org_list = get_orgs.org_list()
+ # Gets value of term user sent in
+    if request.method == "POST":
+        json_data = request.get_json()
+        search_term = json_data["search_term"]
+
+        org_index = get_orgs.org_list().index(search_term)
+        ein = get_orgs.ein_list()[org_index]
+
+        # Might not need an API call for regular search if we're going to direct them to a page on our site
+        # Still need to look into that
+        search = "https://projects.propublica.org/nonprofits/api/v2/organizations/" + ein + ".json"
+        response = requests.get(search)
+
+
+    return true;
+
+@app.route('/backend/get_pdf', methods=['GET', 'POST'])
+def search_data():
+
+    # Gets value of term user sent in
+    if request.method == "POST":
+        json_data = request.get_json()
+        search_term = json_data["search_term"]
+
+        org_index = get_orgs.org_list().index(search_term)
+        ein = get_orgs.ein_list()[org_index]
+
+        search = "https://projects.propublica.org/nonprofits/api/v2/organizations/" + ein + ".json"
+        response = requests.get(search)
+        
+
+    return redirect(response.json()["filings_with_data"]["pdf_url"]);
 
