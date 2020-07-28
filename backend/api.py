@@ -8,28 +8,7 @@ import ast
 
 app = Flask(__name__)
 
-##conn = pyodbc.connect('Driver={SQL Server};'
-##                      'Server=DESKTOP-TB9FI1L\SQLEXPRESS;'
-##                      'Database=FFDB;'
-##                      'Trusted_Connection=yes;')
-server = 'fundflow-server.database.windows.net'
-database = 'FFDB'
-username = 'akh2161@columbia.edu@fundflow-server'
-password = 'IBMblue2020#'   
-driver= '{ODBC Driver 17 for SQL Server}'
 
-conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
-cursor = conn.cursor()
-# Within a function query = request.args
-query = 'National Urban League'
-q = cursor.execute('SELECT ein FROM FFDB.dbo.Companies WHERE name = ?', query.title()).fetchall()[0][0] # .title() ensures every word starts with a capital letter to match the table entries
-print(q)
-# Earlier testing since cursor returns a list of results
-#for row in cursor:
-#    print(row[0])
-response = requests.get("https://projects.propublica.org/nonprofits/api/v2/organizations/{}.json".format(q)) 
-# Still need to get front end to actually display tax info from the content recieved 
-print(response.content["filings_with_data"])
 
 
 
@@ -169,12 +148,6 @@ def search_data():
         json_data = request.get_json()
         search_term = json_data["search_term"]
 
-    #for item in products:
-    #    if search_term.lower() in item["name"].lower():
-    #        search_match.append(item)
-
-    ## send back the WHOLE array of data, so the client can redisplay it
-    #return jsonify(products=products, search_match=search_match, size=search_size)
 
     # Just for testing purposes right now
     return true;

@@ -1,18 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
-    "\\testing_env",
-    "\\web-app-project"
+    "\\src",
+    "\\src\\components",
+    "\\testing_env"
   ],
-  "SelectedNode": "\\web-app-project\\parse_orgs_list.py",
-=======
-    "\\backend",
-    "\\Python 3.7 venv\\Lib",
-    "\\Python 3.7 venv\\Lib\\site-packages",
-    "\\Python 3.7 venv\\Lib\\site-packages\\pyodbc-4.0.30.dist-info"
-  ],
-  "SelectedNode": "\\backend\\api.py",
->>>>>>> 0ad2e86... Add 3.7 py venv
+  "SelectedNode": "\\requirements.txt",
   "PreviewInSolutionExplorer": false
 }
