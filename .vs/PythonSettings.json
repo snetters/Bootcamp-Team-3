@@ -1,8 +1,3 @@
 {
-<<<<<<< HEAD
   "Interpreter": "Workspace|Workspace|Python 3.7 venv"
-=======
-  "TestFramework": "Pytest",
-  "Interpreter": "Workspace|Workspace|testing_venv"
->>>>>>> ec5aa8c1cf3d157e4a1faffd410b5bab4dc1f993
 }

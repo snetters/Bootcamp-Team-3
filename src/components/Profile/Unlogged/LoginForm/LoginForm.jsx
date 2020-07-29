@@ -1,41 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './LoginForm.css'
+import './LoginForm.css';
 
-import axios from 'axios'
+import axios from 'axios';
 
 class LoginForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       username: '',
       pass: '',
       verified: false,
-    }
+    };
 
-    this.handleInputChange = this.handleInputChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.loginGetReq = this.loginGetReq.bind(this)
-    this.loginReq = this.loginPostReq.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginGetReq = this.loginGetReq.bind(this);
+    this.loginReq = this.loginPostReq.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ username: 'initUsername', pass: 'initPass' })
+    this.setState({ username: 'initUsername', pass: 'initPass' });
   }
 
   handleInputChange(event) {
-    console.log(event.target.name, event.target.value)
-    this.setState({ [event.target.name]: event.target.value })
+    console.log(event.target.name, event.target.value);
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   handleSubmit(event) {
-    event.preventDefault()
-    console.log('submitted form =', this.state)
+    event.preventDefault();
+    console.log('submitted form =', this.state);
 
     // API request
     // this.loginGetReq(this.state)
-    this.loginPostReq(this.state)
+    this.loginPostReq(this.state);
 
     // console.log('apiResponse =', resp)
 
@@ -51,17 +51,18 @@ class LoginForm extends React.Component {
         },
       })
       .then((response) => {
+        const { appProps } = this.props;
         // API output data
-        const apiResponse = response.data
+        const apiResponse = response.data;
 
-        this.props.saveUp(apiResponse)
+        appProps.saveUp(apiResponse);
 
         // What you want to do with the API output data
-        return apiResponse
+        return apiResponse;
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   loginPostReq(cS) {
@@ -73,21 +74,22 @@ class LoginForm extends React.Component {
         },
       })
       .then((response) => {
+        const { appProps } = this.props;
         // API output data
-        console.log('Post-Req response.data =', response.data)
+        console.log('Post-Req response.data =', response.data);
 
-        const u = response.data.username
-        const p = response.data.pass
-        const v = response.data.verified
+        const u = response.data.username;
+        const p = response.data.pass;
+        const v = response.data.verified;
 
-        const apiResponse = { username: u, pass: p, verified: v }
+        const apiResponse = { username: u, pass: p, verified: v };
 
-        this.props.saveUp(apiResponse)
+        appProps.saveUp(apiResponse);
         // What you want to do with the API output data
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   render() {
@@ -114,12 +116,22 @@ class LoginForm extends React.Component {
           <br />
         </form>
       </div>
-    )
+    );
   }
 }
 
 LoginForm.propTypes = {
-  saveUp: PropTypes.func,
-}
+  appProps: PropTypes.objectOf(PropTypes.any),
+};
 
-export default LoginForm
+LoginForm.defaultProps = {
+  appProps: {
+    appState: {
+      username: 'username',
+      pass: 'Password',
+      loggedIn: false,
+    },
+  },
+};
+
+export default LoginForm;

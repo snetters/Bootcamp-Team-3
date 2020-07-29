@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import './LoggedIn.css'
+import './LoggedIn.css';
 
 function LoggedIn() {
   return (
     <div className="LoggedIn">
       <p>You Are Logged In</p>
     </div>
-  )
+  );
 }
 
-export default LoggedIn
+export default LoggedIn;

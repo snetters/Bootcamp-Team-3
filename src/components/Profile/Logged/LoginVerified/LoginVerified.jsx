@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import './LoginVerified.css'
+import './LoginVerified.css';
 
 function LoginVerified() {
   return (
     <div className="LoginVerified">
       <p>Login Verified</p>
     </div>
-  )
+  );
 }
 
-export default LoginVerified
+export default LoginVerified;
