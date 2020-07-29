@@ -1,45 +1,43 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom'
 
-import CreateAccountForm from './Unlogged/CreateAccountForm/CreateAccountForm';
-import LoginForm from './Unlogged/LoginForm/LoginForm';
+import CreateAccountForm from './Unlogged/CreateAccountForm/CreateAccountForm'
+import LoginForm from './Unlogged/LoginForm/LoginForm'
 
-import MyDonations from './Logged/MyDonations/MyDonations';
-import MyProfile from './Logged/MyProfile/MyProfile';
+import MyDonations from './Logged/MyDonations/MyDonations'
+import MyProfile from './Logged/MyProfile/MyProfile'
 
-import Unlogged from './Unlogged/Unlogged/Unlogged';
-import LoggedIn from './Logged/LoggedIn/LoggedIn';
+import Unlogged from './Unlogged/Unlogged/Unlogged'
+import LoggedIn from './Logged/LoggedIn/LoggedIn'
 
-import CreateAccountVerified from './Logged/CreateAccountVerified/CreateAccountVerified';
-import LoginVerified from './Logged/LoginVerified/LoginVerified';
+import CreateAccountVerified from './Logged/CreateAccountVerified/CreateAccountVerified'
+import LoginVerified from './Logged/LoginVerified/LoginVerified'
 
-import './Profile.css';
+import './Profile.css'
 
 class Profile extends React.Component {
   constructor(props) {
-    super(props);
-    const { appProps } = this.props;
+    super(props)
     this.state = {
-      username: appProps.appState.username,
-      pass: appProps.appState.pass,
-      loggedIn: appProps.appState.loggedIn,
-    };
-    this.saveUp = this.saveUp.bind(this);
-    this.unloggedMode = this.unloggedMode.bind(this);
-    this.loggedMode = this.loggedMode.bind(this);
+      username: this.props.appState.username,
+      pass: this.props.appState.pass,
+      loggedIn: this.props.appState.loggedIn,
+    }
+    this.saveUp = this.saveUp.bind(this)
+    this.unloggedMode = this.unloggedMode.bind(this)
+    this.loggedMode = this.loggedMode.bind(this)
   }
 
   saveUp(state) {
-    const { appProps } = this.props;
     this.setState({
       username: state.username,
       pass: state.pass,
       loggedIn: state.verified,
-    });
-    console.log('saveUp ', this.state);
-    appProps.saveUp(this.state);
+    })
+    console.log('saveUp ', this.state)
+    this.props.saveUp(this.state)
   }
 
   unloggedMode() {
@@ -71,7 +69,7 @@ class Profile extends React.Component {
           />
         </Switch>
       </div>
-    );
+    )
   }
 
   loggedMode() {
@@ -112,30 +110,28 @@ class Profile extends React.Component {
           />
         </Switch>
       </div>
-    );
+    )
   }
 
   render() {
-    const { logger } = this.state;
-    if (logger.loggedIn) {
-      return this.loggedMode();
+    if (this.state.loggedIn) {
+      return this.loggedMode()
     }
-    return this.unloggedMode();
+    return this.unloggedMode()
   }
 }
 
 Profile.propTypes = {
-  appProps: PropTypes.objectOf(PropTypes.any),
-};
+  appState: PropTypes.objectOf(PropTypes.any),
+  saveUp: PropTypes.func,
+}
 
 Profile.defaultProps = {
-  appProps: {
-    appState: {
-      username: 'username',
-      pass: 'Password',
-      loggedIn: false,
-    },
+  appState: {
+    username: 'username',
+    pass: 'Password',
+    loggedIn: false,
   },
-};
+}
 
-export default Profile;
+export default Profile

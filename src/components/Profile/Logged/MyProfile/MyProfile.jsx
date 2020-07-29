@@ -1,49 +1,50 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import './MyProfile.css';
+import './MyProfile.css'
 
 class MyProfile extends React.Component {
   constructor(props) {
-    super(props);
-    const { profProps } = this.props;
+    super(props)
     this.state = {
-      username: profProps.profState.username,
-      pass: profProps.profState.pass,
-    };
+      username: this.props.profState.username,
+      pass: this.props.profState.pass,
+    }
   }
 
   render() {
-    const { state } = this.state;
     return (
       <div className="MyProfile">
         <p>My Profile</p>
+        <p>
+          {this.state.username} {this.state.pass}
+        </p>
         <br />
 
         <p>
           Username:
-          {state.username}
+          {this.state.username}
         </p>
 
         <p>
           Password:
-          {state.pass}
+          {this.state.pass}
         </p>
       </div>
-    );
+    )
   }
 }
 
 MyProfile.propTypes = {
-  profProps: PropTypes.objectOf(PropTypes.any),
-};
+  profState: PropTypes.objectOf(PropTypes.any),
+}
 
 MyProfile.defaultProps = {
-  profProps: {
+  profState: {
     username: 'username',
     pass: 'Password',
   },
-};
+}
 
-export default MyProfile;
+export default MyProfile
