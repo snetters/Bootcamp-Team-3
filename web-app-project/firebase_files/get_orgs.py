@@ -16,6 +16,11 @@ def ein_list():
     #print(ein_list)
     return ein_list
 
+def donation_links():
+    donations_links = result[list(result.keys())[0]]["link"]
+    
+    return donations_links
+
 print(org_list())
 print(ein_list())
 
