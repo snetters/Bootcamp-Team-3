@@ -6,6 +6,8 @@
 .pnp.js
 venv
 yarn.lock
+./vscode
+./vs
 
 # testing
 /coverage
