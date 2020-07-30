@@ -108,5 +108,5 @@ def loginVerification(inputParams):
 
     ## We send this data to the database
     userInfo = {"username": username, "pass": pasW, "verified": True}
-
+    print(f"userInfo {userInfo}")
     return userInfo

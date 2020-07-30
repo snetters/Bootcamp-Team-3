@@ -30,7 +30,7 @@ class App extends React.Component {
 
   saveUp(state) {
     this.setState(state)
-    console.log('saveUp ', this.state)
+    console.log('app saveUp state ', this.state)
   }
 
   render() {
@@ -48,7 +48,7 @@ class App extends React.Component {
                 <Profile saveUp={this.saveUp} appState={this.state} />
               )}
             />
-            <Route path="/netters" component={Netters} />
+            <Route exact path="/netters" component={Netters} />
             <Route path="/404" component={NotFound} />
             <Redirect to="/404" />
           </Switch>

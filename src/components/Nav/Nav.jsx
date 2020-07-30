@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import './Nav.css';
+import './Nav.css'
 
 function Nav() {
   return (
@@ -25,13 +25,13 @@ function Nav() {
             <li>Profile</li>
           </Link>
 
-          <Link className="netters" to="/netters">
+          <Link className="nettersLinks" to="/netters">
             <li>Netters</li>
           </Link>
         </ul>
       </nav>
     </div>
-  );
+  )
 }
 
-export default Nav;
+export default Nav
