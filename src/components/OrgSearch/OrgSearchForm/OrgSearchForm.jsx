@@ -20,8 +20,10 @@ class OrgSearchForm extends React.Component {
   }
 
   handleInputChange(event) {
-    console.log('org name change to: ', event.target.value)
-    this.setState({ [event.target.name]: event.target.value })
+    const eventName = event.target.name
+    const eventVal = event.target.value
+    console.log(`key ${eventName}'s value changed to`, event.target.value)
+    this.setState(() => ({ [eventName]: eventVal }))
   }
 
   handleSubmit(event) {

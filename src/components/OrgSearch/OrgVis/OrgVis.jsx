@@ -32,5 +32,5 @@ class OrgVis extends React.Component {
 export default OrgVis
 
 OrgVis.propTypes = {
-  saveDown: PropTypes.func,
+  saveDown: PropTypes.object,
 }
