@@ -13,7 +13,8 @@ import About from './components/About/About'
 import OrgSearch from './components/OrgSearch/OrgSearch'
 import Profile from './components/Profile/Profile'
 import Netters from './components/Netters/Netters'
-import NotFound from './components/NotFound/NotFound'
+import NotFound404 from './components/Error/NotFound404'
+import NotFound405 from './components/Error/NotFound405'
 
 import './App.css'
 
@@ -49,7 +50,8 @@ class App extends React.Component {
               )}
             />
             <Route exact path="/netters" component={Netters} />
-            <Route path="/404" component={NotFound} />
+            <Route path="/404" component={NotFound404} />
+            <Route path="/405" component={NotFound405} />
             <Redirect to="/404" />
           </Switch>
         </div>

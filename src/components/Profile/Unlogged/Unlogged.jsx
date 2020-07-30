@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Unlogged.css'
 
-import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 
 import axios from 'axios'
 
