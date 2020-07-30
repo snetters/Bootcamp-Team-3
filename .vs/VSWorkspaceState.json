@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\testing_env",
-    "\\web-app-project"
+    "\\src",
+    "\\src\\components",
+    "\\testing_env"
   ],
-  "SelectedNode": "\\web-app-project\\parse_orgs_list.py",
+  "SelectedNode": "\\requirements.txt",
   "PreviewInSolutionExplorer": false
 }

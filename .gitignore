@@ -6,6 +6,9 @@
 .pnp.js
 venv
 yarn.lock
+./vscode
+**/vscode/
+./vs
 
 # testing
 /coverage
@@ -15,6 +18,12 @@ yarn.lock
 
 # misc
 .DS_Store
+/Python\ 3.7\ venv
+/testing_env
+./Python\ 3.7\ venv
+./testing_env
+*/Python\ 3.7\ venv
+*/testing_env
 .env.local
 .env.development.local
 .env.test.local
