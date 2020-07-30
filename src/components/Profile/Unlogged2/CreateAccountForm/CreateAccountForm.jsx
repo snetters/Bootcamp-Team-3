@@ -1,25 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import './CreateAccountForm.css';
+import './CreateAccountForm.css'
 
-import axios from 'axios';
+import axios from 'axios'
 
 class CreateAccountForm extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       email: '',
       username: '',
       pass: '',
       passConf: '',
       verified: false,
-    };
+    }
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.createAccountGetReq = this.createAccountGetReq.bind(this);
-    this.createAccountPostReq = this.createAccountPostReq.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.createAccountGetReq = this.createAccountGetReq.bind(this)
+    this.createAccountPostReq = this.createAccountPostReq.bind(this)
   }
 
   componentDidMount() {
@@ -28,21 +28,21 @@ class CreateAccountForm extends React.Component {
       username: 'initUsername',
       pass: 'initPass',
       passConf: 'initPassConf',
-    });
+    })
   }
 
   handleInputChange(event) {
-    console.log(event.target.name, event.target.value);
-    this.setState({ [event.target.name]: event.target.value });
+    console.log(event.target.name, event.target.value)
+    this.setState({ [event.target.name]: event.target.value })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    console.log('submitted form =', this.state);
+    event.preventDefault()
+    console.log('submitted form =', this.state)
 
     // API request
-    this.createAccountGetReq(this.state);
-    this.createAccountPostReq(this.state);
+    this.createAccountGetReq(this.state)
+    this.createAccountPostReq(this.state)
 
     // console.log('apiResponse =', resp)
 
@@ -61,18 +61,17 @@ class CreateAccountForm extends React.Component {
       })
       .then((response) => {
         // API output data
-        console.log('Post-Req response.data =', response.data);
+        console.log('Post-Req response.data =', response.data)
 
-        const apiResponse = response.data;
+        const apiResponse = response.data
 
-        console.log('Get-Req response.data =', apiResponse);
-        const { props } = this.props;
-        props.saveUp(apiResponse);
+        console.log('Get-Req response.data =', apiResponse)
+        this.props.saveUp(apiResponse)
         // What you want to do with the API output data
       })
       .catch((error) => {
-        console.log(error);
-      });
+        console.log(error)
+      })
   }
 
   createAccountPostReq(cS) {
@@ -87,26 +86,25 @@ class CreateAccountForm extends React.Component {
       })
       .then((response) => {
         // API output data
-        console.log('Post-Req response.data =', response.data);
+        console.log('Post-Req response.data =', response.data)
 
-        const e = response.data.email;
-        const u = response.data.username;
-        const p = response.data.pass;
-        const v = response.data.verified;
+        const e = response.data.email
+        const u = response.data.username
+        const p = response.data.pass
+        const v = response.data.verified
 
         const apiResponse = {
           email: e,
           username: u,
           pass: p,
           verified: v,
-        };
-        const { props } = this.props;
-        props.saveUp(apiResponse);
+        }
+        this.props.saveUp(apiResponse)
         // What you want to do with the API output data
       })
       .catch((error) => {
-        console.log(error);
-      });
+        console.log(error)
+      })
   }
 
   render() {
@@ -149,24 +147,12 @@ class CreateAccountForm extends React.Component {
           <br />
         </form>
       </div>
-    );
+    )
   }
 }
 
 CreateAccountForm.propTypes = {
-  props: PropTypes.objectOf(PropTypes.any),
-};
+  saveUp: PropTypes.func,
+}
 
-CreateAccountForm.defaultProps = {
-  props: {
-    appState: {
-      email: 'example@email.com',
-      username: 'username',
-      pass: 'Password',
-      passConf: 'Password',
-      verified: false,
-    },
-  },
-};
-
-export default CreateAccountForm;
+export default CreateAccountForm
