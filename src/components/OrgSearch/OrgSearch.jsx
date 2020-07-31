@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import OrgSearchForm from './OrgSearchForm/OrgSearchForm'
+import OrgSearchForm from './OrgSearchForm/OrgSearchForm';
 
-import OrgVis from './OrgVis/OrgVis'
+import OrgVis from './OrgVis/OrgVis';
 
-import './OrgSearch.css'
+import './OrgSearch.css';
 
 class OrgSearch extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       currentOrgName: '',
-    }
+    };
   }
 
   render() {
@@ -26,8 +26,8 @@ class OrgSearch extends React.Component {
 
         <OrgSearchForm
           saveUp={(s) => {
-            console.log('parent saveUp response s =', s)
-            this.setState({ currentOrgName: s.orgName })
+            console.log('parent saveUp response s =', s);
+            this.setState({ currentOrgName: s.orgName });
           }}
         />
 
@@ -35,8 +35,8 @@ class OrgSearch extends React.Component {
 
         <OrgVis saveDown={this.state} />
       </div>
-    )
+    );
   }
 }
 
-export default OrgSearch
+export default OrgSearch;

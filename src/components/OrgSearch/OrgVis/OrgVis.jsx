@@ -1,20 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-import './OrgVis.css'
+import './OrgVis.css';
 
 class OrgVis extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       cOrgName: 'search for an organization above',
-    }
+    };
   }
 
   static getDerivedStateFromProps(props) {
-    const cON = props.saveDown.currentOrgName
-    console.log('saveDown orgName =', cON)
-    return { cOrgName: cON }
+    const cON = props.saveDown.currentOrgName;
+    console.log('saveDown orgName =', cON);
+    return { cOrgName: cON };
   }
 
   render() {
@@ -25,12 +24,8 @@ class OrgVis extends React.Component {
           {this.state.cOrgName}
         </p>
       </div>
-    )
+    );
   }
 }
 
-export default OrgVis
-
-OrgVis.propTypes = {
-  saveDown: PropTypes.object,
-}
+export default OrgVis;

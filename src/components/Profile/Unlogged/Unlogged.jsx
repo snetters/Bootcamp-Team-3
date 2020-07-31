@@ -1,47 +1,51 @@
-import React from 'react'
+import React from 'react';
 
-import './Unlogged.css'
+import './Unlogged.css';
 
-import { Redirect } from 'react-router-dom'
+import SignUpIm from './img/register.svg';
+import LoginIm from './img/log.svg';
 
-import axios from 'axios'
+import axios from 'axios';
 
 class Unlogged extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       username: '',
       pass: '',
       loggedIn: false,
-    }
-    this.handleInputChange = this.handleInputChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.loginPostReq = this.loginPostReq.bind(this)
+      mode: 'login',
+    };
+    this.containerRef = React.createRef();
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginPostReq = this.loginPostReq.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState(() => ({
-      username: nextProps.username,
-      pass: nextProps.pass,
-      loggedIn: nextProps.loggedIn,
-    }))
-    console.log('nextProps this.state ,', this.state)
+      username: nextProps.state.username,
+      pass: nextProps.state.pass,
+      loggedIn: nextProps.state.loggedIn,
+    }));
+    console.log('nextProps this.state ,', this.state);
   }
 
   handleInputChange(event) {
-    const eventName = event.target.name
-    const eventVal = event.target.value
-    this.setState(() => ({ [eventName]: eventVal }))
-    console.log(`${[eventName]}'s value changed to ${eventVal}`)
+    const eventName = event.target.name;
+    const eventVal = event.target.value;
+    this.setState(() => ({ [eventName]: eventVal }));
+    console.log(`${[eventName]}'s value changed to ${eventVal}`);
   }
 
   handleSubmit(event) {
-    event.preventDefault()
-    console.log('submitted form =', this.state)
+    event.preventDefault();
+    console.log('submitted form =', this.state);
 
     // API request
     // this.loginGetReq(this.state)
-    this.loginPostReq(this.state)
+    this.loginPostReq(this.state);
 
     // console.log('apiResponse =', resp)
 
@@ -58,35 +62,45 @@ class Unlogged extends React.Component {
       })
       .then((response) => {
         // API output data
-        console.log('Post-Req response.data =', response.data)
+        console.log('Post-Req response.data =', response.data);
 
-        const u = response.data.username
-        const p = response.data.pass
-        const v = response.data.verified
+        const u = response.data.username;
+        const p = response.data.pass;
+        const v = response.data.verified;
 
-        const apiResponse = { username: u, pass: p, verified: v }
+        const apiResponse = { username: u, pass: p, verified: v };
 
-        this.props.saveUp(apiResponse)
+        this.props.saveUp(apiResponse);
         // What you want to do with the API output data
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
+  }
+
+  handleModeChange() {
+    const curMode = this.state.mode;
+    if (curMode === 'login') {
+      this.setState(() => ({ mode: 'signUp' }));
+    } else if (curMode === 'signUp') {
+      this.setState(() => ({ mode: 'login' }));
+    }
+    console.log('handleModeChange this.state', this.state);
   }
 
   render() {
     return (
-      <div lang="en" className="container">
+      <div lang="en" className="container" ref={this.containerRef}>
         <div className="head">
           <meta charSet="UTF-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          {/* <script
+          <script
             src="https://kit.fontawesome.com/64d58efce2.js"
             crossOrigin="anonymous"
-          /> */}
+          />
           <link rel="stylesheet" href="style.css" />
           <title>Sign in & Sign up Form</title>
         </div>
@@ -94,6 +108,7 @@ class Unlogged extends React.Component {
           <div className="container">
             <div className="forms-container">
               <div className="signin-signup">
+                {/* Login Form */}
                 <form
                   action="#"
                   className="sign-in-form"
@@ -140,6 +155,8 @@ class Unlogged extends React.Component {
                     </a>
                   </div>
                 </form>
+
+                {/* signUp Form */}
                 <form action="#" className="sign-up-form">
                   <h2 className="title">Sign up</h2>
                   <div className="input-field">
@@ -181,32 +198,47 @@ class Unlogged extends React.Component {
                 <div className="content">
                   <h3>Welcome to FundFlow!</h3>
                   <p>Donations without the frustrations Sign up</p>
-                  <button className="btn transparent" id="sign-up-btn">
+                  <button
+                    className="btn transparent"
+                    id="sign-up-btn"
+                    onClick={this.handleModeChange.bind(this)}
+                  >
                     Sign up
                   </button>
                 </div>
-                {/* <img src="img/log.svg" className="image" alt="" /> */}
+                <img src={LoginIm} className="image" alt="log alt" />
               </div>
               <div className="panel right-panel">
                 <div className="content">
                   <h3>Already a Member? LOGIN!</h3>
-                  <button className="btn transparent" id="sign-in-btn">
+                  <button
+                    className="btn transparent"
+                    id="sign-in-btn"
+                    onClick={this.handleModeChange.bind(this)}
+                  >
                     Sign in
                   </button>
                 </div>
-                {/* <img src="img/register.svg" className="image" alt="" /> */}
+
+                <img src={SignUpIm} className="image" alt="register alt" />
               </div>
             </div>
           </div>
-
-          {/* <script src="app.js" /> */}
         </div>
       </div>
-    )
+    );
+  }
+
+  componentDidUpdate() {
+    if (this.state.mode === 'signUp') {
+      this.containerRef.current.classList.add('sign-up-mode');
+    } else if (this.state.mode === 'login') {
+      this.containerRef.current.classList.remove('sign-up-mode');
+    }
   }
 }
 
-export default Unlogged
+export default Unlogged;
 
 // Unlogged.propTypes = {
 //   saveUp: PropTypes.func,
