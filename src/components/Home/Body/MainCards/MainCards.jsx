@@ -1,21 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 //jsx file for the Tracking, Organization, and Secure cards
 
-import './MainCards.css'
+import './MainCards.css';
 
 class MainCards extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   render() {
     return (
       // {/*All three cards animate, flying from the bottom*/}
-      <div className="MainCards w3-row-padding w3-center w3-margin-tops">
-        <div className="w3-third w3-animate-bottom">
+      <ul className="navBody MainCards w3-row-padding w3-center w3-margin-tops">
+        <li className="navList w3-third w3-animate-bottom">
           <div className="w3-card w3-container">
             <h3>Tracking</h3>
             <br />
@@ -27,9 +27,9 @@ class MainCards extends React.Component {
             <p>Maintain donations with our system</p>
             <p>Find out what organizations are doing with your money</p>
           </div>
-        </div>
+        </li>
 
-        <div className="w3-third w3-animate-bottom">
+        <li className="navList w3-third w3-animate-bottom">
           <div
             className="w3-card w3-container"
             // style="min-height:460px"
@@ -44,9 +44,9 @@ class MainCards extends React.Component {
             <p>Search for any non-profit here in the US</p>
             <p>Access to IRS Form 990</p>
           </div>
-        </div>
+        </li>
 
-        <div className="w3-third w3-animate-bottom">
+        <li className="navList w3-third w3-animate-bottom">
           <div
             className="w3-card w3-container"
             // style="min-height:460px"
@@ -61,10 +61,10 @@ class MainCards extends React.Component {
             <p>Secure technology to protect sensitive information</p>
             <p>Remain anonymous when donating</p>
           </div>
-        </div>
-      </div>
-    )
+        </li>
+      </ul>
+    );
   }
 }
 
-export default MainCards
+export default MainCards;

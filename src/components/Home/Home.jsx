@@ -1,15 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import './Home.css'
+import './Home.css';
 
-import Header from './Header/Header'
-import Body from './Body/Body'
-import Footer from './Footer/Footer'
+import Header from './Header/Header';
+import Body from './Body/Body';
+import Footer from './Footer/Footer';
 
 class Home extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
+  }
+
+  refreshUp() {
+    this.setState(this.state);
   }
 
   render() {
@@ -19,8 +23,12 @@ class Home extends React.Component {
         <Body />
         <Footer />
       </div>
-    )
+    );
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 }
 
-export default Home
+export default Home;

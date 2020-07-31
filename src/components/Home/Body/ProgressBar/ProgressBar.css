@@ -1,3 +1,13 @@
 .ProgressBar {
+  position: relative;
   background-color: rgb(172, 38, 38);
+  width: 100%;
+  height: 22vw;
+}
+
+.canvas {
+  background-color: rgb(222, 52, 0);
+  /* position: absolute; change */
+  /* top: 0;
+  left: 0; */
 }

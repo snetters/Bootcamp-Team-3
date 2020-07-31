@@ -139,3 +139,16 @@ def subscriptions():
         }
 
         return subscriptionsData
+
+
+@app.route("/backend/progress", methods=["GET", "POST"])
+def progress():
+    if request.method == "GET":
+        print("nothing")
+    elif request.method == "POST":
+        ## Make some data base call
+        ## Maybe calculate something
+
+        progress = 0.75
+
+        return {"progress": progress}

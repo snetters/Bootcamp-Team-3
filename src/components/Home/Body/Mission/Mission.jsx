@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import './Mission.css'
+import './Mission.css';
 
 class Mission extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   render() {
@@ -19,56 +19,65 @@ class Mission extends React.Component {
           <p className="w3-large">Check out how FundFlow works</p>
         </div>
         <br />
-        <div className="w3-row w3-border">
-          <div className="w3-half w3-container w3-blue w3-border">
-            <h5>
-              <b>Non-profit Database</b>
-            </h5>
-            <p>Gain access to hundreds of non-profits right here in the US.</p>
-            <p>
-              Search for a non-profit by looking for the region, state, category
-              of non-profit, and even type of non-profit.
-            </p>
-          </div>
-          <div className="w3-half w3-container">
-            <h5>*Insert Image*</h5>
-          </div>
-        </div>
-        <br />
-        <div className="w3-row w3-border">
-          <div className="w3-half w3-container w3-light-blue w3-border">
-            <h5>
-              <b>IRS Form 990</b>
-            </h5>
-            <p>Non-profits are required to complete an IRS Form 990</p>
-            <p>
-              Form 990 is used to gather information about the non-profit,
-              promote compliance, and shares information with the public about a
-              program.
-            </p>
-          </div>
-          <div className="w3-half w3-container">
-            <h5>*Insert Image*</h5>
-          </div>
-        </div>
-        <br />
-        <div className="w3-row w3-border">
-          <div className="w3-half w3-container w3-light-green w3-border">
-            <h5>
-              <b>Donation Payment</b>
-            </h5>
-            <p>Donate to your favorite non-profit using our website!</p>
-            <p>
-              Backed by Paypal, all donations are safe and secure. Our users
-              also have the neat option of having a donation remain anonymous.
-            </p>
-          </div>
-          <div className="w3-half w3-container">
-            <h5>*Insert Image*</h5>
-          </div>
-        </div>
-        <br />
-        <br />
+        <ul className="ul">
+          <li className="li">
+            <div className="w3-row w3-border">
+              <div className="w3-half w3-container w3-blue w3-border">
+                <h5>
+                  <b>Non-profit Database</b>
+                </h5>
+                <p>
+                  Gain access to hundreds of non-profits right here in the US.
+                </p>
+                <p>
+                  Search for a non-profit by looking for the region, state,
+                  category of non-profit, and even type of non-profit.
+                </p>
+              </div>
+              <div className="w3-half w3-container">
+                <h5>*Insert Image*</h5>
+              </div>
+            </div>
+          </li>
+
+          <li className="li">
+            <div className="w3-row w3-border">
+              <div className="w3-half w3-container w3-light-blue w3-border">
+                <h5>
+                  <b>IRS Form 990</b>
+                </h5>
+                <p>Non-profits are required to complete an IRS Form 990</p>
+                <p>
+                  Form 990 is used to gather information about the non-profit,
+                  promote compliance, and shares information with the public
+                  about a program.
+                </p>
+              </div>
+              <div className="w3-half w3-container">
+                <h5>*Insert Image*</h5>
+              </div>
+            </div>
+          </li>
+
+          <li className="li">
+            <div className="w3-row w3-border">
+              <div className="w3-half w3-container w3-light-green w3-border">
+                <h5>
+                  <b>Donation Payment</b>
+                </h5>
+                <p>Donate to your favorite non-profit using our website!</p>
+                <p>
+                  Backed by Paypal, all donations are safe and secure. Our users
+                  also have the neat option of having a donation remain
+                  anonymous.
+                </p>
+              </div>
+              <div className="w3-half w3-container">
+                <h5>*Insert Image*</h5>
+              </div>
+            </div>
+          </li>
+        </ul>
 
         {/*Mission section; no commands needed(no clicks or buttons)*/}
         <div className="w3-center">
@@ -107,14 +116,14 @@ class Mission extends React.Component {
           </p>
         </div>
         <footer className="w3-container w3-blue">
-          <h5>
-            <input type="button" className="fa fa-smile-o" />
-          </h5>
+          <a className="fa fa-smile-o" href="https://ibm.com/">
+            React
+          </a>
         </footer>
         <hr />
       </div>
-    )
+    );
   }
 }
 
-export default Mission
+export default Mission;

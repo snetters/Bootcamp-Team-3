@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import Accordion from './Accordion/Accordion'
-import MainCards from './MainCards/MainCards'
-import Mission from './Mission/Mission'
-import ProgressBar from './ProgressBar/ProgressBar'
-import Reach from './Reach/Reach'
-import Slideshow from './Slideshow/Slideshow'
-import Tabs from './Tabs/Tabs'
+import OrgAccordion from './OrgAccordion/OrgAccordion';
+import MainCards from './MainCards/MainCards';
+import Mission from './Mission/Mission';
+import ProgressBar from './ProgressBar/ProgressBar';
+import Reach from './Reach/Reach';
+import Slideshow from './Slideshow/Slideshow';
+import Tabs from './Tabs/Tabs';
 
 export default function Body() {
   return (
     <div className="Body">
-      <Accordion />
+      <OrgAccordion />
       <MainCards />
       <Mission />
       <ProgressBar />
@@ -19,5 +19,5 @@ export default function Body() {
       <Slideshow />
       <Tabs />
     </div>
-  )
+  );
 }

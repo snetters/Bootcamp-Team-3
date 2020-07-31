@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import './Reach.css'
+import './Reach.css';
 
 class Reach extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   render() {
@@ -17,8 +17,9 @@ class Reach extends React.Component {
           <h3>Our Reach</h3>
           <p>Read how FundFlow has helped these fighters!</p>
         </div>
-        <div className="w3-row-padding">
-          <div className="w3-third">
+
+        <ul className="ul w3-row-padding">
+          <li className="w3-third">
             <div className="w3-card-4 w3-hover-dark-grey">
               {/*Hover over image; could make it clickable if you want to*/}
               <img
@@ -30,9 +31,9 @@ class Reach extends React.Component {
                 <p>John Doe - volunteer at ____</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div className="w3-third">
+          <li className="w3-third">
             <div className="w3-card-4 w3-hover-dark-grey">
               {/*Hover over image; could make it clickable if you want to*/}
               <img
@@ -44,9 +45,9 @@ class Reach extends React.Component {
                 <p>John Smith - founder of ____</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div className="w3-third">
+          <li className="w3-third">
             <div className="w3-card-4 w3-hover-dark-grey">
               {/*Hover over image; could make it clickable if you want to*/}
               <img
@@ -58,11 +59,11 @@ class Reach extends React.Component {
                 <p>Mary Sue - donated to ____</p>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-    )
+    );
   }
 }
 
-export default Reach
+export default Reach;
