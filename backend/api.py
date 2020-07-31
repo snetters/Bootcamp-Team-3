@@ -113,10 +113,9 @@ def loginVerification(inputParams):
 
 
 @app.route("/backend/subscriptions", methods=["GET", "POST"])
-def login():
+def subscriptions():
     if request.method == "GET":
-        return
-
+        print("nothing")
     elif request.method == "POST":
         dict_str = request.data.decode("UTF-8")
         postData = ast.literal_eval(dict_str)
