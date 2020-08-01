@@ -29,7 +29,7 @@ class OrgAccordion extends React.Component {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <div id="Demo1" className="w3-hide">
+              <div id="Demo1" className="w3-black">
                 <div className="w3-container">
                   <p>
                     Donations are a powerful way to help non-profits that are
@@ -48,7 +48,7 @@ class OrgAccordion extends React.Component {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <div id="Demo2" className="w3-hide">
+              <div id="Demo2" className="w3-black">
                 <p>Demo2</p>
               </div>
             </AccordionItemPanel>
@@ -61,7 +61,7 @@ class OrgAccordion extends React.Component {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <div id="Demo3" className="w3-hide w3-black">
+              <div id="Demo3" className="w3-black">
                 <div className="w3-container">
                   <p>
                     This is ____ , a non-profit aiming to help troubled youth:

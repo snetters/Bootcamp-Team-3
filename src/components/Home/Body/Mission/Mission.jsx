@@ -115,11 +115,6 @@ class Mission extends React.Component {
             help ease any worries you may have.
           </p>
         </div>
-        <footer className="w3-container w3-blue">
-          <a className="fa fa-smile-o" href="https://ibm.com/">
-            React
-          </a>
-        </footer>
         <hr />
       </div>
     );

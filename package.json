@@ -21,6 +21,7 @@
     "react-native-vector-icons": "^7.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll-table": "^1.0.8",
     "sass-loader": "^9.0.2",
     "simple-react-accordion": "^1.0.14",
     "style-loader": "^1.2.1",

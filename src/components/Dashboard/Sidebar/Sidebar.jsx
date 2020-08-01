@@ -18,38 +18,26 @@ class Sidebar extends React.Component {
   // Toggle between showing and hiding the sidebar, and add overlay effect
   w3_open() {
     console.log('w3_open');
-    console.log(this.mySidebarRef, this.myOverlayRef);
-    // if (mySidebar.style.display === 'block') {
-    //   mySidebar.style.display = 'none';
-    //   overlayBg.style.display = 'none';
-    // } else {
-    //   mySidebar.style.display = 'block';
-    //   overlayBg.style.display = 'block';
-    // }
+    if (this.mySidebar.style.display === 'block') {
+      this.mySidebar.style.display = 'none';
+      this.myOverlayRef.style.display = 'none';
+    } else {
+      this.mySidebar.style.display = 'block';
+      this.myOverlayRef.style.display = 'block';
+    }
   }
 
   // Close the sidebar with the close button
   w3_close() {
     console.log('w3_close');
-    console.log(this.mySidebarRef, this.myOverlayRef);
-    // mySidebar.style.display = 'none';
-    // overlayBg.style.display = 'none';
+    this.mySidebar.style.display = 'none';
+    this.myOverlayRef.style.display = 'none';
   }
 
   render() {
     return (
       <div>
-        {/* Open Slidebar */}
-        <div className="Top w3-bar w3-top w3-green w3-large">
-          <button
-            className="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"
-            onClick={this.w3_open}
-          >
-            <i className="fa fa-bars" />  Menu
-          </button>
-          <span className="w3-bar-item w3-right">FundFlow</span>
-        </div>
-
+        Open Slidebar
         <nav
           className="sidebarNav w3-sidebar w3-collapse w3-white w3-animate-left"
           id="mySidebar"
@@ -66,33 +54,72 @@ class Sidebar extends React.Component {
               </span>
               <br />
               {/* Add function to have clickable icons */}
-              {/*<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-                        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-                        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>*/}
+              <a href="#" className="w3-bar-item w3-button">
+                <i className="fa fa-envelope" />
+              </a>
+              <a href="#" className="w3-bar-item w3-button">
+                <i className="fa fa-user" />
+              </a>
+              <a href="#" className="w3-bar-item w3-button">
+                <i className="fa fa-cog" />
+              </a>
             </div>
           </div>
           <hr />
           <div className="w3-container">
             <h5>Dashboard</h5>
           </div>
-          <div className="w3-bar-block" onClick={this.w3_open}>
+          <div className="w3-bar-block" onClick={this.w3_open.bind(this)}>
             {/* Add function to have clickable icons */}
-            {/* <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onClick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-dollar fa-fw"></i>  Donations</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  My Organizations</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-certificate fa-fw"></i>  Badges</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Find Organizations</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-                        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Donation History</a>
-                    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br /><br /> */}
+            <a
+              href="#"
+              class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+              onClick="w3_close()"
+              title="close menu"
+            >
+              <i class="fa fa-remove fa-fw"></i>  Close Menu
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">
+              <i class="fa fa-users fa-fw"></i>  Overview
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-dollar fa-fw"></i>  Donations
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-users fa-fw"></i>  My Organizations
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-certificate fa-fw"></i>  Badges
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-bullseye fa-fw"></i>  Find Organizations
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-bell fa-fw"></i>  News
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-history fa-fw"></i>  Donation History
+            </a>{' '}
+            <br />
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+              <i class="fa fa-cog fa-fw"></i>  Settings
+            </a>{' '}
+            <br />
+            <br />
+            <br />
           </div>
         </nav>
-
         {/* Overlay effect of sidebar */}
         <div
           className="myOverlay w3-overlay w3-hide-large w3-animate-opacity"
-          onClick={this.w3_close}
+          onClick={this.w3_close.bind(this)}
           title="close side menu"
           id="myOverlay"
           ref={this.myOverlayRef}

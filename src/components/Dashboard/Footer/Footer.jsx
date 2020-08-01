@@ -52,17 +52,12 @@ class Footer extends React.Component {
               // style="position:relative;bottom:55px;"
               className="w3-tooltip w3-right"
             >
-              <form
+              <input
                 type="button"
-                text="Refresh"
-                name="refresh"
-                className="w3-text w3-theme-light w3-padding"
-                onSubmit={() => {
-                  window.location.reload(false);
+                onClick={() => {
+                  this.props.refreshUp();
                 }}
-              >
-                <button type="submit">Go To Top</button>
-              </form>
+              />
             </div>
           </li>
 

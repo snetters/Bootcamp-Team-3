@@ -6,6 +6,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import MyDonations from './Logged/MyDonations/MyDonations';
 import MyProfile from './Logged/MyProfile/MyProfile';
 import Forms from './Logged/Forms/Forms';
+import Payment from './Logged/Payment/Payment';
 
 import Unlogged from './Unlogged/Unlogged';
 import LoggedIn from './Logged/LoggedIn/LoggedIn';
@@ -41,6 +42,23 @@ class Profile extends React.Component {
   unloggedMode() {
     return (
       <div className="UnloggedMode">
+        <title> Unlogged Mode </title>
+        <meta charSet="UTF-8" />
+        <link rel="stylesheet" href="Profile.css" />
+        <link
+          rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+        <link
+          href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet"
+          id="bootstrap-css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        />
+
         <Switch>
           <Route
             exact
@@ -55,6 +73,23 @@ class Profile extends React.Component {
   loggedMode() {
     return (
       <div className="LoggedMode">
+        <title> LoggedMode </title>
+        <meta charSet="UTF-8" />
+        <link rel="stylesheet" href="Profile.css" />
+        {/* <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+          /> */}
+        <link
+          href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet"
+          id="bootstrap-css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        />
+
         <ul className="navList">
           <Link className="navLinks" to="/profile/myDonations">
             <li>My Donations</li>
@@ -66,6 +101,10 @@ class Profile extends React.Component {
 
           <Link className="navLinks" to="/profile/subscriptions">
             <li>Subscriptions</li>
+          </Link>
+
+          <Link className="navLinks" to="/profile/payment">
+            <li>Payment</li>
           </Link>
         </ul>
 
@@ -98,6 +137,8 @@ class Profile extends React.Component {
             path="/profile/subscriptions"
             render={() => <Forms saveUp={this.saveUp} profState={this.state} />}
           />
+
+          <Route exact path="/profile/payment" render={() => <Payment />} />
         </Switch>
       </div>
     );

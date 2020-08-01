@@ -1,0 +1,137 @@
+.p{
+    background-color: lightgray;
+}
+
+.content{
+    padding-left: 20px;
+    color: white;
+    font-size: 40px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:lightgreen;
+    color: black;
+    text-align: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+    background-image: linear-gradient(gray);
+}
+
+body{
+    background-image: linear-gradient(lightblue, lightblue);
+    margin: 0;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+container{
+    border:1px solid teal;
+    margin-left: 200px;
+    height:320px ;
+    width:10%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.topnav{
+    overflow: hidden;
+    background-image: linear-gradient( teal, gray);
+    align-items: center;
+}
+
+.topnav a{
+    float: left;
+    display: block;
+    color: black;
+    background-image: linear-gradient( teal, gray);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 25px 50px;
+    border-inline-end-color: black;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: static;
+    top: 0;
+    background-color: lightgreen;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+li a {
+
+display: block;
+color:white;
+padding:14px 16px;
+text-decoration: none;
+font-size: 25px;
+font-weight: bold;
+}
+
+a:hover{
+    color: beige;
+}
+
+.search{
+    display: block;
+    float: right;
+    color:black;
+    padding:10px 25px;
+    margin: 0px;;
+}
+
+.button {
+  align-content: center;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid lightgreen;
+  padding: 20px 40px;
+}
+
+.button:hover {
+  background-color: lightgreen; /* Green */
+  color: white;
+}

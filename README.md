@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Before running
+
+### `pip install -r requirements.txt
+
+Run the above command in order to install the requirements needed to run the full stack project. Most notably: Flask, dotenv and Axios are necessary.
+
+### `python3 -m venv venv`
+
+Run the above command from within the ptvis/ project directory in order to create a Virtual Environment via the default Python venv (requires Python>3.2)
+
+### `source venv/bin/activate`
+
+Run the above command from within the ptvis/ project directory in order to start venv
+
 ## Available Scripts
 
 In the project directory, you can run:

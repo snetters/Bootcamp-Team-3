@@ -9,14 +9,7 @@ import './Header.css';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isClicked: false,
-    };
-    this.modalRef = React.createRef();
-  }
-
-  onClick() {
-    this.setState(() => ({}));
+    this.state = {};
   }
 
   render() {
@@ -33,7 +26,7 @@ class Header extends React.Component {
           <h1 className="w3-xxxlarge w3-animate-bottom">FundFlow</h1>
         </div>
         {/* Modal Component */}
-        <Modal modalRef={this.modalRef} onClick={this.onModalClick} />
+        <Modal />
       </header>
     );
   }

@@ -21,9 +21,32 @@ class Dashboard extends React.Component {
     this.state = {};
   }
 
+  refreshUp() {
+    this.setState(this.state);
+  }
+
   render() {
     return (
       <div className="Dashboard">
+        <head>
+          <title> Dashboard </title>
+          <meta charset="UTF-8" />
+          <link rel="stylesheet" href="Home.css" />
+          <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+          />
+          <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+          />
+        </head>
+
         {/* Sidebar/menu with Overlay effect, merged with Top for better comparmetalization*/}
         <Sidebar />
 
@@ -50,7 +73,7 @@ class Dashboard extends React.Component {
           {/* Footer */}
           <PageFooter />
 
-          <Footer />
+          <Footer refreshUp={this.refreshUp.bind(this)} />
 
           {/* End page content */}
         </div>

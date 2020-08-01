@@ -17,3 +17,9 @@
 .myOverlay {
   cursor: pointe;
 }
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
