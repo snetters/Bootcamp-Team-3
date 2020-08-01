@@ -10,18 +10,20 @@ class Rus extends React.Component {
 
   render() {
     return (
-      <div classNameName="Rus">
-        <head>
+      <div className="Rus">
+        <header>
           <title> Organization Search </title>
-          <meta charset="UTF-8" />
-          <link rel="stylesheet" href="format.css" />
+          <meta charSet="UTF-8" />
+          <link rel="stylesheet" type="text/css" href="format.css" />
           {/* <script src="script.js"></script> */}
           <link
             rel="stylesheet"
+            type="text/css"
             href="https://www.w3schools.com/w3css/4/w3.css"
           />
           <link
             href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            type="text/css"
             rel="stylesheet"
             id="bootstrap-css"
           />
@@ -29,9 +31,10 @@ class Rus extends React.Component {
           <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
           <link
             rel="stylesheet"
+            type="text/css"
             href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
           />
-        </head>
+        </header>
         {/* 
         
          */}

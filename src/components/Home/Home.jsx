@@ -21,7 +21,7 @@ class Home extends React.Component {
       <div className="Home">
         <title> Home </title>
         <meta charSet="UTF-8" />
-        <link rel="stylesheet" href="Home.css" />
+        <link rel="stylesheet" type="text/css" href="Home.css" />
         <link
           rel="stylesheet"
           href="https://www.w3schools.com/w3css/4/w3.css"

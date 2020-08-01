@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .  --ext .js",
     "start-backend": "venv/bin/flask run --no-debugger",
-    "start": "expo start",
+    "start": "BROWSER=firefox expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
