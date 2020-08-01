@@ -76,10 +76,10 @@ class Profile extends React.Component {
         <title> LoggedMode </title>
         <meta charSet="UTF-8" />
         <link rel="stylesheet" href="Profile.css" />
-        {/* <link
-            rel="stylesheet"
-            href="https://www.w3schools.com/w3css/4/w3.css"
-          /> */}
+        <link
+          rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css"
+        />
         <link
           href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           rel="stylesheet"
