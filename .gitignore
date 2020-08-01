@@ -19,14 +19,16 @@ yarn.lock
 # testing #
 ###########
 /coverage
-/build]
-.DS_Store
+/build
+# /build]
+**.DS_Store
 /venv
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 __pycache__
+
 
 # Framework managers #
 ######################
