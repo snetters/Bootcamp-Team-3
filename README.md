@@ -10,9 +10,11 @@ Run the above command in order to install the requirements needed to run the ful
 
 Run the above command from within the ptvis/ project directory in order to create a Virtual Environment via the default Python venv (requires Python>3.2)
 
-### `source venv/bin/activate`
+### `source ./venv/bin/activate`
 
-Run the above command from within the ptvis/ project directory in order to start venv
+### `./venv/Scripts/activate.bat` (in Windows)
+
+Run the above command from within the ptvis/ project root directory in order to start venv
 
 ## Available Scripts
 
@@ -35,7 +37,7 @@ You will also see any lint errors in the console.
 ### `yarn start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:19006](http://localhost:19006) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.

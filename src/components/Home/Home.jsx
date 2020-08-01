@@ -38,7 +38,7 @@ class Home extends React.Component {
 
         <Header />
         <Body />
-        <Footer />
+        <Footer refreshUp={this.refreshUp.bind(this)} />
 
         {/* <footer className="w3-container w3-blue">
           <a className="fa fa-smile-o" href="https://ibm.com/">

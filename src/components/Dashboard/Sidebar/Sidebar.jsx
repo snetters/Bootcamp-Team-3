@@ -73,43 +73,43 @@ class Sidebar extends React.Component {
             {/* Add function to have clickable icons */}
             <a
               href="#"
-              class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
-              onClick="w3_close()"
+              className="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+              // onClick="w3_close()"
               title="close menu"
             >
-              <i class="fa fa-remove fa-fw"></i>  Close Menu
+              <i className="fa fa-remove fa-fw"></i>  Close Menu
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-blue">
-              <i class="fa fa-users fa-fw"></i>  Overview
+            <a href="#" className="w3-bar-item w3-button w3-padding w3-blue">
+              <i className="fa fa-users fa-fw"></i>  Overview
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-dollar fa-fw"></i>  Donations
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-dollar fa-fw"></i>  Donations
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-users fa-fw"></i>  My Organizations
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-users fa-fw"></i>  My Organizations
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-certificate fa-fw"></i>  Badges
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-certificate fa-fw"></i>  Badges
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-bullseye fa-fw"></i>  Find Organizations
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-bullseye fa-fw"></i>  Find Organizations
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-bell fa-fw"></i>  News
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-bell fa-fw"></i>  News
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-history fa-fw"></i>  Donation History
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-history fa-fw"></i>  Donation History
             </a>{' '}
             <br />
-            <a href="#" class="w3-bar-item w3-button w3-padding">
-              <i class="fa fa-cog fa-fw"></i>  Settings
+            <a href="#" className="w3-bar-item w3-button w3-padding">
+              <i className="fa fa-cog fa-fw"></i>  Settings
             </a>{' '}
             <br />
             <br />

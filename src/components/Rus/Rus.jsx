@@ -10,7 +10,7 @@ class Rus extends React.Component {
 
   render() {
     return (
-      <div className="Rus">
+      <div classNameName="Rus">
         <head>
           <title> Organization Search </title>
           <meta charset="UTF-8" />
@@ -36,7 +36,7 @@ class Rus extends React.Component {
         
          */}
         <div>
-          <h1 element class="content">
+          <h1 element className="content">
             {' '}
             About{' '}
           </h1>
@@ -57,9 +57,9 @@ class Rus extends React.Component {
         {/* 
         
         */}
-        <div class="row">
-          <div class="column">
-            <h1 element class="content">
+        <div className="row">
+          <div className="column">
+            <h1 element className="content">
               {' '}
               Toy Drive{' '}
             </h1>
@@ -76,16 +76,15 @@ class Rus extends React.Component {
               // style="padding: 20px 20px;"
               src="toyDrive.jpg"
               alt="Toy IMG"
-              height="285px"
             />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
 
             <br />
 
-            <h1 element class="content">
+            <h1 element className="content">
               {' '}
               Food Drive{' '}
             </h1>
@@ -101,13 +100,13 @@ class Rus extends React.Component {
             <img src="food.jpg" alt="food" element id="rotate" />
             <br />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
           </div>
 
-          <div element class="column">
-            <h1 element class="content">
+          <div element className="column">
+            <h1 element className="content">
               Renovation
             </h1>
             <p
@@ -122,13 +121,13 @@ class Rus extends React.Component {
             <img src="reno.jpg" alt="Picture" element id="rotate" />
             <br />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
 
             <br />
 
-            <h1 element class="content">
+            <h1 element className="content">
               Community Service
             </h1>
             <p
@@ -143,13 +142,13 @@ class Rus extends React.Component {
             <img src="serve.jpg" alt="IMG" element id="rotate" />
             <br />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
           </div>
 
-          <div element class="column">
-            <h1 element class="content">
+          <div element className="column">
+            <h1 element className="content">
               Foundation
             </h1>
             <p
@@ -163,13 +162,13 @@ class Rus extends React.Component {
             <img src="money.jpg" alt="IMG" element id="rotate" />
             <br />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
 
             <br />
 
-            <h1 element class="content">
+            <h1 element className="content">
               Bail Fund
             </h1>
             <p
@@ -184,8 +183,8 @@ class Rus extends React.Component {
             <img src="bail.png" alt="IMG" element id="rotate" />
             <br />
             <div>
-              <button class="button"> Donate </button>
-              <button class="button"> Finanical Info </button>
+              <button className="button"> Donate </button>
+              <button className="button"> Finanical Info </button>
             </div>
           </div>
         </div>
