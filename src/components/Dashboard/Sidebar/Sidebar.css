@@ -1,0 +1,25 @@
+.Sidebar {
+}
+
+.Top {
+  z-index: 4;
+}
+
+.sidebarNav {
+  z-index: 3;
+  width: 300px;
+}
+
+.maxWidth {
+  width: 100%;
+}
+
+.myOverlay {
+  cursor: pointe;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

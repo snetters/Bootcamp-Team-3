@@ -1,0 +1,52 @@
+{
+  "name": "Bootcamp-Team-3",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./AppEntryOveride.js",
+  "scripts": {
+    "lint": "eslint .  --ext .js",
+    "start-backend": "venv/bin/flask run --no-debugger",
+    "start": "BROWSER=firefox expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "expo": "~38.0.8",
+    "expo-status-bar": "^1.0.2",
+    "ngrok": "^3.2.7",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
+    "react-native-web": "~0.11.7",
+    "react-scroll-table": "^1.0.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "prop-types": "^15.7.2",
+    "react-accessible-accordion": "^3.3.1",
+    "react-bootstrap": "^1.3.0",
+    "react-native-elements": "^2.0.4",
+    "react-native-vector-icons": "^7.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "sass-loader": "^9.0.2",
+    "simple-react-accordion": "^1.0.14",
+    "style-loader": "^1.2.1",
+    "svg-url-loader": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-preset-expo": "~8.1.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.0"
+  },
+  "proxy": "http://localhost:5000"
+}
