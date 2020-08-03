@@ -1,0 +1,17 @@
+.OrgAccordion {
+  background-color: lightblue;
+  border-style: solid;
+  border-color: white;
+}
+
+.AccordionItemPanel {
+  background-color: white;
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+

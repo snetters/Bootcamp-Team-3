@@ -1,0 +1,30 @@
+ .Tabs {
+  background-color: white;
+  color: black;
+}
+
+.navBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  min-height: 10%;
+  color: black;
+  font-family: Arial;
+  text-align: center;
+  
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  
+} 
+
+li.Tabs{
+  background-color: lightblue;
+}
+

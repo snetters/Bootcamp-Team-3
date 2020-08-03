@@ -1,0 +1,28 @@
+ .MainCards {
+  background-color: white;
+  
+}
+
+.navBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  min-height: 10%;
+  color: black;
+  font-family: Arial;
+  text-align: center;
+  
+}
+
+li.navList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  border-style: solid;
+  border-color: white;
+  
+  
+} 

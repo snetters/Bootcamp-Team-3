@@ -1,0 +1,25 @@
+.Modal {
+}
+
+.font {
+  color: black;
+  font-size: large;
+  text-align: center;
+}
+
+.w3-modal-content {
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightskyblue;
+  
+}
+
+AccordianItemButton {
+  border-style: solid;
+  border-width: 1px;
+  border-color: teal;
+
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+}

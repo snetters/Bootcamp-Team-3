@@ -1,0 +1,39 @@
+ .Reach {
+  background-color: white;
+  color: black;
+}
+
+.ul {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  min-height: 10%;
+  color: black;
+  font-family: Arial;
+  text-align: center;
+}
+
+.li {
+  border-style: dashed;
+  border-color: white;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+} 
+
+w3-third w3-white.Reach {
+  border-style: solid;
+  border-color: lightskyblue;
+  border-width: 5px;
+}
+
+img.Reach {
+  width:50px;
+  height: 50px;
+}

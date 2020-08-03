@@ -1,0 +1,10 @@
+.ProgressBar {
+  position: relative;
+  width: 100%;
+  height: 22vw;
+  background-color: lightskyblue;
+}
+
+.canvas {
+  background-color: gray;
+}

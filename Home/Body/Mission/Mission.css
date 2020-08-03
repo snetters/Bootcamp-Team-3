@@ -1,0 +1,17 @@
+ .Mission {
+  /*background-color: lightblue;*/
+  color: black;
+  
+} 
+
+ul.Mission{ 
+  background-color: white;
+}
+
+h5.Mission {
+  background-color: white;
+}
+
+w3-half w3-container.Mission {
+  background-color: white;
+}

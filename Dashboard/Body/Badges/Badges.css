@@ -1,0 +1,28 @@
+.Badges {
+}
+
+.maxWidth {
+  width: 100%;
+}
+
+.ul {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  min-height: 10%;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+.li {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  border: none;
+}
